@@ -1,0 +1,69 @@
+<html>
+<head>Stack Order</head>
+<title>Stack Order</title>
+<script type=text/javascript>
+            var topLayer="layer4";
+            function mover(toTop)
+                {
+                    document.getElementById(topLayer).style.zIndex="0";
+                    document.getElementById(toTop).style.zIndex="1";
+                    topLayer=toTop;
+                }
+</script>
+<style type="text/css">
+            #layer1
+                {
+                    border:solid thick black;
+                    background-color:red;
+                    padding:10px;
+                    width:300px;
+                    height:200px;
+                    position:absolute;
+                    top:100px;
+                    left:200px;
+                    z-index:1;
+                }
+            #layer2
+                {
+                    border:solid thick black;
+                    background-color:gray;
+                    padding:10px;
+                    width:300px;
+                    height:200px;
+                    position:absolute;
+                    top:120px;
+                    left:220px;
+                    z-index:1;
+                }
+            #layer3
+                {
+                    border:solid thick black;
+                    background-color:pink;
+                    padding:10px;
+                    width:300px;
+                    height:200px;
+                    position:absolute;
+                    top:140px;
+                    left:240px;
+                    z-index:1;
+                }
+	    #layer4
+                {
+                    border:solid thick black;
+                    background-color:green;
+                    padding:10px;
+                    width:300px;
+                    height:200px;
+                    position:absolute;
+                    top:160px;
+                    left:260px;
+                    z-index:1;
+                }
+        </style>
+    <body>
+        <p id=layer1 onclick=mover('layer1');>This is the 4th layer</p>
+        <p id=layer2 onclick=mover('layer2');>This is the 3rd layer</p>
+        <p id=layer3 onclick=mover('layer3');>This is the 2nd layer</p>
+	<p id=layer4 onclick=mover('layer4');>This is the 1st layer</p>
+    </body>
+ </html>
